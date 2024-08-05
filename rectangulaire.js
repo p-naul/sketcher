@@ -11,7 +11,8 @@ const error = () => window.console.error('Sketchfab API error');
 const success = apiClient => {
 api = apiClient; 
 
-
+//let valDiaG = 0;
+//let select = "X";
 let nomBaseTable = "X";
 let nomSupportTable = "X";
 let idBase = 0;
@@ -22,7 +23,6 @@ idSupportTable = 0;
 let choixChem = 0;
 let digit1 = "K";
 let tableLibre = 1;
-let sphereLibre = 1;
 let nomObjet2 = "X";
 let idObjet2 = 0;
 let posX2 = 0 ;
@@ -41,6 +41,7 @@ let idChem1 = 0;
 let posXChem1 = 0;
 let posYChem1 = 0;
 let H = 0;
+let sphereLibre = "oui";
 //------------------------------------------------
 const tableRec = [ //tableau copié du terminal (attention, ôter les espaces dans le nom entre ' ')
     ['E111_', 3 ],
@@ -83,7 +84,7 @@ const tableRec = [ //tableau copié du terminal (attention, ôter les espaces da
     ['Spher', 544 ],
     ['BtRot', 558 ]
 ];
-const tablePos = [ //tableau copié du terminal (attention, ôter les espaces dans le nom entre ' ')
+const tablePos = [ 
     ['E111', -63 , 23 ],
     ['F111', -63, 14 ],
     ['E311', -83, 23],
@@ -124,7 +125,7 @@ api.addEventListener('viewerready', () => {
     api.getNodeMap(function(err, nodes) {
         if (!err) {window.console.log(nodes); }
     });
-    api.hide(558);
+    api.hide(558); //bouton rotation non programmé
     api.getNodeMap(function(err, nodes) { //récupère les tables de nodeName et instanceId de la scène
         if (!err) {
             if (typeof nodes === 'object') {
@@ -179,14 +180,12 @@ api.addEventListener('viewerready', () => {
             if (nomBase1 != "tbdBase") { //table de droite occupée => retour de la base vers la table de gauche
                 move(idBase1, posXBase1, posYBase1, 0 );
                 move(idSupport1, posXBase1, posYBase1, 0)
-                if (nomChem1 != "tbdChem") {
-                    move(idChem1, -18.8, 30.2, 15 );
-                }
             }
             move(idBase2, 0, 0, 0+H);
             move(idSupport2, 0, 0, 0);
             if ((nomChem1 != "tbdChem") && (nomBase1 != "tbdBase") && (info.instanceID-2 ==  idBase1)) {
                 move(idChem1, info.position3D[0]*1000, -info.position3D[1]*1000, info.position3D[2]*1000 );
+                sphereLibre = "oui";
             }
             nomBase1 = nomBase2;
             idBase1 = idBase2;
@@ -200,8 +199,8 @@ api.addEventListener('viewerready', () => {
             (nomObjet2.slice(0,1) == "F") ||
             (nomObjet2.slice(0,1) == "G") ||
             (nomObjet2.slice(0,1) == "H")) {
-            if (nomChem1 != "tbdChem") { //sphere de droite occupée => retour vers la table de gauche
-                move(idChem1, posXChem1, posYChem1, 0);
+            if (sphereLibre == "non") { //sphere de droite occupée => retour vers la table de gauche, tant qu'elle n'a pas été installée sur une base
+                moveRotate(idChem1,     1,0,0,      0,1,0,      0,0,1,    posXChem1, posYChem1, 0);
             }
             move(idObjet2, -18.8, 30.2, 15);
             nomChem1 = nomObjet2;
@@ -211,12 +210,10 @@ api.addEventListener('viewerready', () => {
         }
         //----------------------------------
         // action bouton
-        // window.console.log('id empty', idChem1-1);
         if (nomObjet2.slice(0,2) == "Bt") {
+            sphereLibre = "non"
             for (let pas4 = 0; pas4 < tableBoutons.length; pas4++) {
-                // window.console.log(tableBoutons[pas4][0].slice(2,5), nomObjet2, tableBoutons[pas4][0])
                 if (nomObjet2 == tableBoutons[pas4][0]) {
-                    // window.console.log('pouet')
                     if (nomObjet2.slice(2,5) == "000") {moveRotate (idChem1, 1,0,0,      0,1,0,      0,0,1,  tableBoutons[pas4][1], tableBoutons[pas4][2], tableBoutons[pas4][3]) };
                     if (nomObjet2.slice(2,5) == "S45") {moveRotate (idChem1, 1,0,0,      0,0.7,.7,   0,-.7,.7,  tableBoutons[pas4][1], tableBoutons[pas4][2], tableBoutons[pas4][3]) };
                     if (nomObjet2.slice(2,5) == "S90") {moveRotate (idChem1, 1,0,0,      0,0,1,      0,-1,0,  tableBoutons[pas4][1], tableBoutons[pas4][2], tableBoutons[pas4][3]) };
