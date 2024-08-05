@@ -11,8 +11,7 @@ const error = () => window.console.error('Sketchfab API error');
 const success = apiClient => {
 api = apiClient; 
 
-//let valDiaG = 0;
-//let select = "X";
+
 let nomBaseTable = "X";
 let nomSupportTable = "X";
 let idBase = 0;
