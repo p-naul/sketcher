@@ -1,12 +1,12 @@
 *
 {
-    background: #2D2D2D;
+    background: black;
+    /* background: #2D2D2D; */
     /* font-family: Snell Roundhand, cursive; */
 }
 body {
-    background: transparent;
     color: white;
-    background: transparent;
+    background: black;
     /* font-family: cursive; */
     font-family: "Gill Sans", sans-serif;
     text-align: center;
@@ -21,22 +21,21 @@ p {
     flex-wrap: wrap;
 }
 .col1{
-    width:70px;
+    width:30%;
   }
 #timer {
   /* font-size: 24px; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .col2{
-    width:260px;
-    /* padding-left: 50px; */
-    text-align: center;
+    width:30%;
+    /* text-align: center; */
 }
 .col3{
-  width:30px;
+  width:30%;
   float: left;
-  text-align: center;
-  font-size: 15px;
+  /* text-align: center;
+  font-size: 15px; */
 }
 #api-frame {
     display: block;
@@ -52,7 +51,7 @@ p {
   position: absolute;
   height: 45px;
   width: 100%;
-  background: #2D2D2D;
+  background: black;
 }
 #bas {
   position: absolute;
@@ -114,7 +113,7 @@ img {
 }
 .button {
   padding: 10px 20px; /* Marge interne pour un aspect agréable */
-  background-color: #0074D9; /* Couleur de fond */
+  background-color: black; /* Couleur de fond */
   color: #FFFFFF; /* Couleur du texte */
   border: none; /* Supprimer la bordure */
   cursor: pointer; /* Curseur de la souris */

@@ -32,11 +32,6 @@ function move(ID, TX, TY, TZ) {
 
 
 function moveRotate(ID, vX1, vX2, vX3, vY1, vY2, vY3, vZ1, vZ2, vZ3, TX, TY, TZ) {
-  // il s'agit de calculer pour chaque axe l’angle entre le vecteur de l'axe et le vecteur unitaire de l’axe qui est [0, 0, 1] pour l'axe z
-  // dans la matrix, les vecteurs sont: axe X [0]-[2], axe Y [4]-[6], axe Z [8]-[10]
-  //au zenith: plein Z
-  //BtN90: plein Y 
-  //BtE90: plein X
   api.getMatrix(ID, function(err, matrix) {
     // window.console.log('matrix', matrix);
     matrix.local[0]=vX1;
