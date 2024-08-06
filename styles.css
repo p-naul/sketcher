@@ -106,15 +106,24 @@ img {
   object-fit: cover;
 }
 .button-container {
-  text-align: center; /* Centrer les boutons horizontalement */
-  position: absolute;
+  /* text-align: center; /* Centrer les boutons horizontalement */
+  /* position: absolute;
   left: 100px;
-  top: 600px;
+  top: 600px; */ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espace entre les boutons */
+  margin-top: 50px; /* Espace pour le titre */
 }
-.button {
-  padding: 10px 20px; /* Marge interne pour un aspect agréable */
-  background-color: black; /* Couleur de fond */
-  color: #FFFFFF; /* Couleur du texte */
-  border: none; /* Supprimer la bordure */
-  cursor: pointer; /* Curseur de la souris */
+.button-container button {
+  flex: 1 1 auto; /* Les boutons prennent la largeur disponible */
+  outline: none;
+  border: none;
+}
+.title {
+  position: absolute;
+  top: 10px; /* Ajustez cette valeur pour décaler verticalement */
+  left: 20px; /* Ajustez cette valeur pour décaler horizontalement */
+  font-size: 24px;
+  font-weight: bold;
 }
