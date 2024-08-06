@@ -1,37 +1,33 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE HTML>
+<!-- <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> -->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Connectors</title>
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+    <script type="text/javascript" src="AnimationControls.js"></script>
     <link rel="stylesheet" href="styles.css" media="screen" title="no title">
-    <title>Produits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
+    <div> <iframe src="" id="api-frame"></iframe> </div>
+    
     <div id="cacheHaut">
-        <div class="title">Product Sketcher</div>
-        <div class="button-container">
-            <h2>Panel Mount</h2>
-            <button><input type='image' src="RectangularBackshell.JPG" id="rectangularBackshell" style="width:180px; height:180px;" ></button>
-            <button><input type='image' src="DMM.JPG" id="dmm" style="width:180px; height:180px;" ></button>
-        </div>
-        <div class="button-container">
-            <h2>Board</h2>
-            <button><input type='image' src="VITA.JPG" id="vita" style="width:180px; height:180px;" ></button>
-            <button><input type='image' src="CMM.JPG" id="cmm" style="width:180px; height:180px;" ></button>
-        </div>
-        <div class="button-container">
-            <h2>IN/OUT</h2>
-            <button><input type='image' src="CircularBackshell.JPG" id="circularBackshell" style="width:180px; height:180px;"  ></button>
-            <button><input type='image' src="Optimus.JPG" id="optimus" style="width:180px; height:180px;"  ></button>
-        </div>
-        <div>
-            <p>Sketcher Tutorial</p>
-            <video width="320" height="240" controls><source src="tuto.mp4" type="video/mp4"></video>
-        </div>
+        <section class="container">
+            <!-- <section class="col1"><img src="drapeauEN.JPG" id="drapeau" onClick="window.location.href = 'https://k2b1.000webhostapp.com/XBe.html';"></section> -->
+            <section class="col2">  <div id="myDiv">Select a connector type to sketch in 3D</div> </section>
+                <!-- H<br>
+                <input type="range" min="0" max="20" value="0" class="slider" id="H"> -->
+            <!-- <section class="col3">
+                <input type='image' src="help.png" id="help">
+            </section> -->
+        </section>
     </div>
 
     <script type="text/javascript" src="main.js"></script>
+    <!-- <script type="text/javascript" src="hover.js"></script> -->
+    <script type="text/javascript" src="functions.js"></script>
 
 </body>
 </html>
