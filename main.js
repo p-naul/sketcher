@@ -39,8 +39,8 @@ api.addEventListener('viewerready', () => {
                     // console.log(info.position2D[0], info.position2D[1])
                     // popupText.innerText = text;
                     popupText.innerText = TObj[i][1];
-                    popup.style.left = info.position2D[0] + 'px';
-                    popup.style.top = info.position2D[1] + 20 + 'px';
+                    popup.style.left = info.position2D[0] + 70 + 'px';
+                    popup.style.top = info.position2D[1] + 300 + 'px';
                     popup.style.display = 'block';
                 };
             };

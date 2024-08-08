@@ -1,5 +1,5 @@
 const version = '1.12.1';
-const iframe = document.getElementById('api-frame');
+const iframe = document.getElementById('api-frameRect');
 var client = new window.Sketchfab(version, iframe);
 let api;
 // raccords cylindriques : ff0fabc7ac6b440789da41e40e13f8b3
