@@ -91,11 +91,11 @@ p {
 #cacheBas {
   position: absolute;
   height: 65px;
-  top: 550px;
+  top: 1060px;
   float: right;
   width: 100%;
   font-size: 14px;
-  color: rgb(180, 177, 177);
+  /* color: rgb(206, 26, 206); */
   text-align: center;
   padding: 15px;
 }

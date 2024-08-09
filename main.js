@@ -2,7 +2,8 @@ const version = '1.12.1';
 const iframe = document.getElementById('api-frame');
 var client = new window.Sketchfab(version, iframe);
 let api;
-const uid = 'd52b36c6cc5343b387883f763ef2693d'; 
+// const uid = 'd52b36c6cc5343b387883f763ef2693d'; 
+const uid = '122c6f2e36c7475db0b065dd96441fcc';
 
 var boutonAide = document.querySelector("input");
 
@@ -30,30 +31,31 @@ api.addEventListener('viewerready', () => {
     // api.getNodeMap(function(err, nodes) {
     //     if (!err) {window.console.log(nodes); }
     // });
-    api.addEventListener('nodeMouseEnter', function (info) {
-            for (let i = 0; i < TObj.length; i++) {
-                if (TObj[i][0] == info.instanceID) {
-                    // text = TObj[i][1];
-                    var popup = document.getElementById('popup');
-                    var popupText = document.getElementById('popup-text');
-                    // console.log(info.position2D[0], info.position2D[1])
-                    // popupText.innerText = text;
-                    popupText.innerText = TObj[i][1];
-                    popup.style.left = info.position2D[0] + 70 + 'px';
-                    popup.style.top = info.position2D[1] + 300 + 'px';
-                    popup.style.display = 'block';
-                };
-            };
-            // console.log('nodeMouseEnter', info);
-    }, {pick: 'fast' });
+    // api.addEventListener('nodeMouseEnter', function (info) {
+    //         for (let i = 0; i < TObj.length; i++) {
+    //             if (TObj[i][0] == info.instanceID) {
+    //                 // text = TObj[i][1];
+    //                 var popup = document.getElementById('popup');
+    //                 var popupText = document.getElementById('popup-text');
+    //                 // console.log(info.position2D[0], info.position2D[1])
+    //                 // popupText.innerText = text;
+    //                 popupText.innerText = TObj[i][1];
+    //                 popup.style.left = info.position2D[0] + 70 + 'px';
+    //                 popup.style.top = info.position2D[1] + 300 + 'px';
+    //                 popup.style.display = 'block';
+    //             };
+    //         };
+    //         // console.log('nodeMouseEnter', info);
+    // }, {pick: 'fast' });
 
 
-    api.addEventListener('nodeMouseLeave', function (info) {popup.style.display = 'none';}, {pick: 'fast'});
+    // api.addEventListener('nodeMouseLeave', function (info) {popup.style.display = 'none';}, {pick: 'fast'});
 
     api.addEventListener('click',function(info) { 
     if (info.instanceID) {  // le clic se fait effectivement sur un objet 
         window.console.log('clicked node', info.instanceID);
-        if ((info.instanceID == 464) || (info.instanceID == 527)) { 
+        // if ((info.instanceID == 464) || (info.instanceID == 527)) { 
+        if (info.instanceID == 338) { 
             window.open('rect.html', '_blank');
         }
     }
