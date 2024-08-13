@@ -14,7 +14,7 @@ body {
     line-height: 17px;
 }
 p {
-  font-size: 20px;
+  font-size: 17px;
   color: #669dfb;
   font-family: Helvetica, Arial, system-ui;
 }
@@ -45,7 +45,7 @@ p {
     left: 50px;
     width: 90%;
     /* padding: 10px; */
-    height: 800px;
+    height: 1000px;
     border: 0;
     top: 330px;
 }
@@ -91,7 +91,7 @@ p {
 #cacheBas {
   position: absolute;
   height: 65px;
-  top: 1060px;
+  top: 1260px;
   float: right;
   width: 100%;
   font-size: 14px;
