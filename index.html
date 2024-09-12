@@ -1,29 +1,56 @@
-<!DOCTYPE HTML>
-<!-- <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> -->
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Connectors</title>
-    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
-    <script type="text/javascript" src="AnimationControls.js"></script>
-    <link rel="stylesheet" href="styles.css" media="screen" title="no title">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <div> <iframe src="" id="api-frame"></iframe> </div>
-    <div id="cacheHautBlanc"><img src="imgEnTete2.jpg" style="width: 1150px; height: 320px; left: 0px"></div>
-    <div id="cacheHaut">
-        <h1><br><br>At Nicomatic, we are all about connections</h1>
-        <p>Discover our products in 3D, double click to focus</p>
-    </div>
-    <!-- <div id="popup" ><span id="popup-text"></span> -->
-    <div id="cacheBas"></div>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicomatic Experience</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="./assets/img/NicomaticGroup_Logo_Horizontal_White 1.png"
+          alt="Nicomatic Group"
+        />
+      </div>
+      <div class="language-switcher">
+        <img src="./assets/img/FrenchFlag.jpg" alt="Français" />
+        <span>Français</span>
+      </div>
+    </header>
 
-    <script type="text/javascript" src="main.js"></script>
-    <!-- <script type="text/javascript" src="hover.js"></script> -->
-    <script type="text/javascript" src="functions.js"></script>
+    <section class="hero">
+      <img
+        src="./assets/img/laurent-perren-S3xxiedz0hE-unsplash 1.jpg"
+        alt="Cockpit d'avion"
+        class="hero-image"
+      />
+      <div class="hero-text">
+        <!-- <h1>Bienvenue dans l'univers des produits Gauthier<br>Sélectionnez le type de backshell ci-dessous pour le <span>configurer en 3D</span><br /></h1> -->
+        <h1>Welcome in Gauthier commodity<br>Select a type of backshell below and <br><span>design your own</span><br /></h1>
+      </div>
+    </section>
 
-
-</body>
+    <section class="scenarios">
+      <div class="scenario">
+        <a href="s1.html?scenario=1">
+          <!-- <h2>Raccord rectangulaire</h2>   <p>Réaliser le sketch 3D de votre raccord rectangulaire</p> -->
+          <h2>Rectangular Backshell</h2>   <p>Sketch it</p>
+        </a>
+      </div>
+      <div class="scenario">
+        <!-- <a href="s2.html?scenario=2"> -->
+          <!-- <h2>Raccord circulaire</h2>   <p>(en cours, non disponible)</p> -->
+          <h2>Circular Backshell</h2>   <p>(Work in Progress, not available)</p>
+        <!-- </a> -->
+      </div>
+      <div class="scenario">
+        <!-- <a href="s3.html?scenario=3"> -->
+          <!-- <h2>Design libre</h2>   <p>(en cours, non disponible)</p> -->
+          <h2>Custom Design</h2>   <p>(Work in Progress, not available)</p>
+        <!-- </a> -->
+      </div>
+    </section>
+  </body>
 </html>

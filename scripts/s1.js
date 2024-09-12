@@ -1,8 +1,6 @@
-const version = '1.12.1';
-const iframe = document.getElementById('api-frameRect');
-var client = new window.Sketchfab(version, iframe);
+const iframe = document.getElementById("api-frame");
+var client = new Sketchfab( iframe );
 let api;
-// raccords cylindriques : ff0fabc7ac6b440789da41e40e13f8b3
 const uid = 'aa9fd74e20724e64a6c8b1bb9113d96a'; 
 
 var boutonAide = document.querySelector("input");
@@ -103,7 +101,7 @@ const tablePos = [
     ['K500', -65 , -3 ],
     ['K600', -65 , -14 ],
     ['K700', -65 , -25 ],
-    ['K800', -65, -36 ],
+    ['K800', -65, -36 ]
 ];
 
 const tableBoutons = [
