@@ -233,8 +233,8 @@ api.addEventListener('viewerready', () => {
     
     document.getElementById("H").addEventListener("input", function(){ //au curseur, monte ou descend le corps
         if (nomBase1 != "tbdBase") {
-            move(idBase1, 0, 0, (document.getElementById("H").value));
-            H = document.getElementById("H").value;
+            move(idBase1, 0, 0, (document.getElementById("H").value * 6));
+            H = document.getElementById("H").value ;
         }
     });
 
