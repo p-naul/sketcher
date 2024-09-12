@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gauthier 3D</title>
+    <title>Gauthier Backshell</title>
     <link rel="stylesheet" href="./assets/styles/stylesScenario.css" />
     <link
       rel="stylesheet"
@@ -20,9 +20,7 @@
         const scenario = params.get("scenario");
 
         let content = "";
-        if (scenario === "1") {
-
-          // équipement embarqué pour gérer l’air conditionné 1U v1 (A2) le plus simple, un interupteur
+        if (scenario === "1") { // rectangular backshell
           content = `
             <ul>
               <p></p>
@@ -42,42 +40,15 @@
               </ul>
               <li>[3] Repeat step [2] to add more chimneys</li>
               <li>[4] To modify the orientation of a chimney after it's placed on case, select it on case, it appears on the sphere, then change its orientation and click on case to transfer it back</li>
-              <li>[5] Screen shot several views to share your design with Gauthier</li>
+              <li>[5] Screen shot several views to share your design with Gauthier (Work in progress to save and forward your 3D file, currently not in use)</li>
             </ul>`;
-        } else if (scenario === "2") {
-          // équipement embarqué pour gérer l’air conditionné 1U v2 (A3) un interrupteur et un bouton
+        } else if (scenario === "2") { //TBD
           content = `
             <ul>
-              <p></p>
-              <span class="highlight">[2]  Pour gérez un équipement embarqué :</span>
-              <p></p>
-              <li>1 boîtier électronique au format 1U et son panneau de commande contenant</li>
-              <ul>
-                <li>1 interrupteur pour gérer l'allumage et l'extinction</li>
-                <li>1 bouton poussoir pour sélectionner le mode Automatique ou Standby</li>
-              </ul>
-              <li>1 harnais pour la connectique interne utilisant 1 connecteur CMM sur carte et 1 connecteur CMM sur face avant</li>
-              <li>1 harnais d’interface client utilisant 1 connecteur DMM sur boîtier et 1 connecteur CMM sur carte</li>
-              <li>En extérieur, 1 connecteur DMM et son backshell rectangulaire</li>
             </ul>`;
-        } else if (scenario === "3") {
-          // équipement embarqué pour gérer l’air conditionné 2U (A1) le plus compliqué
+        } else if (scenario === "3") { //TBD
           content = ` 
             <ul>
-              <p></p>
-              <span class="highlight">[3]  Pour gérez l’air conditionné, assemblez :</span>
-              <p></p>
-              <li>1 boîtier électronique au format 2U et son panneau de commande contenant</li>
-              <ul>
-                <li>1 sélecteur rotatif 5 vitesses et position OFF pour régler la vitesse de ventilation cabine</li>
-                <li>1 sélecteur rotatif 5 vitesses et position OFF pour régler la vitesse de ventilation cockpit</li>
-                <li>1 sélecteur rotatif 5 positions et position OFF pour sélectionner la source de l’air conditionné</li>
-                <li>1 bouton poussoir bistable pour gérer les clapets en ouverture et fermeture</li>
-              </ul>
-              <li>1 harnais pour connecter ces sélecteurs et bouton à la carte, utilisant 1 connecteur CMM</li>
-              <li>1 harnais pour connecter la face avant à la carte</li>
-              <li>1 harnais d’interface client utilisant 1 connecteur Optimus étanche et 1 connecteur CMM sur carte</li>
-              <li>En extérieur, 1 connecteur Optimus étanche</li>
             </ul>`;
         } else {
           content = "<p>Aucun scénario sélectionné.</p>";
